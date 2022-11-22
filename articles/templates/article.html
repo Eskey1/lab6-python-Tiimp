@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ post.title }}</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}/static/css/article.css">
+</head>
+<body>
+    <div align="left" class="image">
+      <img src="{{ STATIC_URL }}/static/1200px-NeXT_logo.png"/>
+    </div>
+    <div align="right" class="reference">
+        <a href="/">
+            <h2>Все статьи</h2>
+        </a>
+    </div>
+    <div align="justify">
+           <h1>{{ post.title }}</h1>
+      </div>
+       <div class="article-info">
+                <div class="article-author">{{ post.author.username }}</div>
+                <div class="article-created-date">{{ post.created_date }}</div>
+       </div>
+    <p class="article">{{ post.text }}</p>
+</body>
