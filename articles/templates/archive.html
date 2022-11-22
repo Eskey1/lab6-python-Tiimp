@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Архив статей</title>
-     <link rel="stylesheet" href="{{ STATIC_URL }}/static/css/article.css">
+     <link rel="stylesheet" href="{{ STATIC_URL }}/static/css/article1.css">
 </head>
 <body>
   <div class="header">
-      <img src="{{ STATIC_URL }}/static/1200px-NeXT_logo.png" height="60px"/>
-
+      <img src="{{ STATIC_URL }}/static/1200px-NeXT_logo.png" height="120px"/>
   </div>
   <div class="archive">
       {% for post in posts %}
@@ -25,8 +24,10 @@
       {% endfor %}
       <div align="center">
         <ul id="create">
-            <a href="article/add">Создать статью</a>
-        </ul>
+          {% for description in links %}
+            <p><a href="{{ description.ref }}">{{ description.text }}</a></p>
+          {% endfor %}
+      </ul>
       </div>
   </div>
 </body>
