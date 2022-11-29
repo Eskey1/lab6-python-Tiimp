@@ -24,9 +24,13 @@
       {% endfor %}
       <div align="center">
         <ul id="create">
-          {% for description in links %}
-            <p><a href="{{ description.ref }}">{{ description.text }}</a></p>
-          {% endfor %}
+            {% if request.user.is_authenticated %}
+                <br><a href="article/add">Создать статью</a>
+                <br><a href="logout/">Выйти</a>
+            {% else %}
+                <br><a href="login/">Войти</a>
+                <br><a href="registration/">Регистрация</a>
+            {% endif %}
       </ul>
       </div>
   </div>

@@ -13,7 +13,7 @@
                 <p>{{ form.errors }}</p>
                 <p>
                     <label class="uname" data-icon="u">Your username</label>
-                    <input name="username" required="required" type="text" placeholder="Логин" />
+                    <input name="username" required="required" type="text" placeholder="Логин" value="{{ form.username }}"/>
                 </p>
                 <p>
                     <label class="youmail" data-icon="e" > Your email</label>
@@ -21,7 +21,7 @@
                 </p>
                 <p>
                     <label class="youpasswd" data-icon="p">Your password </label>
-                    <input name="password" type="password" placeholder="Пароль"/>
+                    <input name="password" type="password" placeholder="Пароль" value="{{ form.password }}"/>
                 </p>
                 <p class="signin button">
                     <input type="submit" value="Sign up"/>
